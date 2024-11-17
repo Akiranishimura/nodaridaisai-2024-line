@@ -8,6 +8,7 @@ app.get('*', (c) => c.text('Hello World!'));
 app.post('/api/webhook', async (c) => {
 	const data = await c.req.json();
 	const events: WebhookEvent[] = (data as any).events;
+	// @ts-ignore c.envで型エラーが出るので
 	const accessToken: string = c.env.CHANNEL_ACCESS_TOKEN;
 
 	await Promise.all(
@@ -26,7 +27,5 @@ app.post('/api/webhook', async (c) => {
 	);
 	return c.json({ message: 'ok' });
 });
-
-
 
 export default app;
