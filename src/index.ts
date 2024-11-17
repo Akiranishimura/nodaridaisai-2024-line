@@ -1,18 +1,32 @@
-/**
- * Welcome to Cloudflare Workers! This is your first worker.
- *
- * - Run `npm run dev` in your terminal to start a development server
- * - Open a browser tab at http://localhost:8787/ to see your worker in action
- * - Run `npm run deploy` to publish your worker
- *
- * Bind resources to your worker in `wrangler.toml`. After adding bindings, a type definition for the
- * `Env` object can be regenerated with `npm run cf-typegen`.
- *
- * Learn more at https://developers.cloudflare.com/workers/
- */
+import { MessageAPIResponseBase, TextMessage, WebhookEvent } from '@line/bot-sdk';
+import { Hono } from 'hono';
+import { textEventHandler } from './textEventHandler';
 
-export default {
-	async fetch(request, env, ctx): Promise<Response> {
-		return new Response('Hello World!');
-	},
-} satisfies ExportedHandler<Env>;
+const app = new Hono();
+app.get('*', (c) => c.text('Hello World!'));
+
+app.post('/api/webhook', async (c) => {
+	const data = await c.req.json();
+	const events: WebhookEvent[] = (data as any).events;
+	const accessToken: string = c.env.CHANNEL_ACCESS_TOKEN;
+
+	await Promise.all(
+		events.map(async (event: WebhookEvent) => {
+			try {
+				await textEventHandler(event, accessToken);
+			} catch (err: unknown) {
+				if (err instanceof Error) {
+					console.error(err);
+				}
+				return c.json({
+					status: 'error',
+				});
+			}
+		})
+	);
+	return c.json({ message: 'ok' });
+});
+
+
+
+export default app;
