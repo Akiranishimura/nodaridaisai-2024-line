@@ -1,0 +1,157 @@
+{
+	"performance": {
+		"type": "template",
+		"altText": "【企画検索】",
+		"template": {
+			"type": "buttons",
+			"title": "【企画検索】",
+			"text": "該当する項目を選んでください！",
+			"actions": [
+				{
+					"type": "message",
+					"label": "理大祭特別企画",
+					"text": "理大祭特別企画"
+				},
+				{
+					"type": "message",
+					"label": "講義棟企画",
+					"text": "講義棟企画"
+				},
+				{
+					"type": "message",
+					"label": "中庭ステージ",
+					"text": "中庭ステージ"
+				},
+				{
+					"type": "message",
+					"label": "屋外企画",
+					"text": "屋外企画"
+				}
+			]
+		}
+	},
+	"kougitou1_3": {
+		"type": "template",
+		"altText": "【講義棟企画1~3階】",
+		"template": {
+			"type": "buttons",
+			"title": "【講義棟企画1~3階】",
+			"text": "該当する項目を選んでください！",
+			"actions": [
+				{
+					"type": "message",
+					"label": "1階",
+					"text": "1階"
+				},
+				{
+					"type": "message",
+					"label": "2階",
+					"text": "2階"
+				},
+				{
+					"type": "message",
+					"label": "3階",
+					"text": "3階"
+				}
+			]
+		}
+	},
+	"kougitou4_6": {
+		"type": "template",
+		"altText": "【講義棟企画4~6階】",
+		"template": {
+			"type": "buttons",
+			"title": "【講義棟企画4~6階】",
+			"text": "該当する項目を選んでください！",
+			"actions": [
+				{
+					"type": "message",
+					"label": "4階",
+					"text": "4階"
+				},
+				{
+					"type": "message",
+					"label": "5階",
+					"text": "5階"
+				},
+				{
+					"type": "message",
+					"label": "6階",
+					"text": "6階"
+				}
+			]
+		}
+	},
+	"kougitou1": {
+		"type": "text",
+		"text": "【講義棟1階】\n『K101：休憩スペース』\n疲れた体をリフレッシュするためのエリアです！飲食物を持ち込んでリラックスできる席を多数ご用意しております。\n\n『K102：休憩スペース』\nK101とは一味違う特別な空間。ここではPVや団体インタビューを放映し、理大祭の魅力をさらに深くお楽しみいただけます！\n\n『K103：メッセージボード』\n最高の理大祭にするために、皆さんの想いをメッセージボードに刻みましょう！\n\n『K104：理大祭本部』\n迷子になった際や落とし物をした際は理大祭本部にお越しください。実行委員が対応いたします。"
+	},
+	"stage": {
+		"type": "template",
+		"altText": "【中庭ステージ】",
+		"template": {
+			"type": "buttons",
+			"title": "【中庭ステージ】",
+			"text": "該当する項目を選んでください！",
+			"actions": [
+				{
+					"type": "message",
+					"label": "11月23日（土）",
+					"text": "11月23日（土）"
+				},
+				{
+					"type": "message",
+					"label": "11月24日（日）",
+					"text": "11月24日（日）"
+				}
+			]
+		}
+	},
+	"outside": {
+		"type": "template",
+		"altText": "【屋外企画・飲食】",
+		"template": {
+			"type": "buttons",
+			"title": "【屋外企画・飲食】",
+			"text": "該当する項目を選んでください！",
+			"actions": [
+				{
+					"type": "message",
+					"label": "Gブース",
+					"text": "Gブース"
+				},
+				{
+					"type": "message",
+					"label": "Wブース",
+					"text": "Wブース"
+				},
+				{
+					"type": "message",
+					"label": "Sブース",
+					"text": "Sブース"
+				},
+				{
+					"type": "message",
+					"label": "Cブース",
+					"text": "Cブース"
+				}
+			]
+		}
+	},
+	"outside_other": {
+		"type": "template",
+		"altText": "【屋外企画・その他】",
+		"template": {
+			"type": "buttons",
+			"title": "【屋外企画・その他】",
+			"text": "該当する項目を選んでください！",
+			"actions": [
+				{
+					"type": "message",
+					"label": "その他ブース",
+					"text": "その他ブース"
+				}
+			]
+		}
+	}
+}
